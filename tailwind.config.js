@@ -9,8 +9,10 @@ const colors = {
 module.exports = {
     theme: {
         extend:{
-            ...colors,
-            ...theme['colors']
+            colors: {
+                ...theme['colors'],
+                ...colors
+            }
         }
     },
     variants: {},
