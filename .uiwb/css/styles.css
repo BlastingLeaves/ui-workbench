@@ -14714,6 +14714,14 @@ body {
   box-shadow: none;
 }
 
+.fill-light {
+  fill: #f6e05e;
+}
+
+.fill-none {
+  fill: transparent;
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -33492,6 +33500,14 @@ body {
 
   .sm\:focus\:shadow-none:focus {
     box-shadow: none;
+  }
+
+  .sm\:fill-light {
+    fill: #f6e05e;
+  }
+
+  .sm\:fill-none {
+    fill: transparent;
   }
 
   .sm\:fill-current {
@@ -52275,6 +52291,14 @@ body {
     box-shadow: none;
   }
 
+  .md\:fill-light {
+    fill: #f6e05e;
+  }
+
+  .md\:fill-none {
+    fill: transparent;
+  }
+
   .md\:fill-current {
     fill: currentColor;
   }
@@ -71056,6 +71080,14 @@ body {
     box-shadow: none;
   }
 
+  .lg\:fill-light {
+    fill: #f6e05e;
+  }
+
+  .lg\:fill-none {
+    fill: transparent;
+  }
+
   .lg\:fill-current {
     fill: currentColor;
   }
@@ -89835,6 +89867,14 @@ body {
 
   .xl\:focus\:shadow-none:focus {
     box-shadow: none;
+  }
+
+  .xl\:fill-light {
+    fill: #f6e05e;
+  }
+
+  .xl\:fill-none {
+    fill: transparent;
   }
 
   .xl\:fill-current {

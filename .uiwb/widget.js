@@ -6,9 +6,10 @@ import MenuControl from './menu-control'
 import About from './about'
 
 const Widget = ({compList, selected, select}) => {
+
     const [menuOpened, setMenu] = React.useState(false)
     const [aboutOpened, setAbout] = React.useState(false)
-
+    const [fav, changeFav] = React.useState(selected)
 
     const menuOpen = () => {
         setMenu(true)
@@ -37,9 +38,14 @@ const Widget = ({compList, selected, select}) => {
                         key={idx}
                         name={comp}
                         selected={selected === idx}
+                        fav={fav === idx}
                         select={() => {
                             select(idx)
                             menuClose()
+                        }}
+                        changeFav={() =>{
+                            changeFav(idx)
+                            localStorage.setItem('favorite', idx)
                         }}/>
                 )}
             </div>

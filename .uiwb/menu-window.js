@@ -2,9 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import WindowClose from './window-close'
 import UIWBLogo from './uiwb-logo'
+import {useOutsideClick} from './helpers'
 
 const MenuWindow = ({menuOpened, menuClose, aboutOpen, children}) => {
-    return <div className="sm:w-1/2 md:w-1/3 w-full bg-ui-primary text-ui-light "
+
+    const ref = React.useRef()
+
+    useOutsideClick(ref, () => menuOpened && menuClose())
+
+    return <div ref={ref}
+                className="sm:w-1/2 md:w-1/3 w-full bg-ui-primary text-ui-light "
                 style={{
                     position: 'fixed',
                     top: 0,

@@ -3,18 +3,27 @@ const theme = require('./src/assets/theme')
 const colors = {
     'ui-primary': '#283344',
     'ui-light': '#f6e05e',
-    "ui-hover": '#344a6e',
+    "ui-hover": '#344a6e'
 }
+
+const defaultFill = theme => ({
+    'light': colors['ui-light'],
+    'none': 'transparent',
+})
 
 module.exports = {
     theme: {
-        extend:{
+        extend: {
             colors: {
                 ...theme['colors'],
                 ...colors
             }
+        },
+        fill: {
+            ...defaultFill(),
+            current: 'currentColor'
         }
     },
     variants: {},
-    plugins: [],
+    plugins: []
 }

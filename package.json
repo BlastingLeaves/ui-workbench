@@ -10,10 +10,10 @@
   "main": "build/index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "tailwind": "tailwindcss build .uiwb/css/tailwind.css -o .uiwb/css/styles.css",
-    "start": "yarn run tailwind && webpack-dev-server --open --mode development",
+    "tw": "tailwindcss build .uiwb/css/tailwind.css -o .uiwb/css/styles.css",
+    "start": "yarn run tw && webpack-dev-server --open --mode development",
     "test": "mocha test/*.spec.js --require esm",
-    "build": "yarn run tailwind && webpack --mode production"
+    "build": "yarn run tw && webpack --mode production"
   },
   "author": "Vlad Blindu",
   "license": "MIT",
