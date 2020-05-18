@@ -39,7 +39,7 @@ const Widget = ({compList, selected, select}) => {
                         selected={selected === idx}
                         select={() => {
                             select(idx)
-                            close()
+                            menuClose()
                         }}/>
                 )}
             </div>

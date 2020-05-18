@@ -1,6 +1,7 @@
 import React from 'react'
 import {useOutsideClick} from './helpers'
 import UIWBLogo from './uiwb-logo'
+import WindowClose from './window-close'
 
 const About = ({aboutClose}) => {
 
@@ -10,7 +11,7 @@ const About = ({aboutClose}) => {
 
     return <div
         ref={ref}
-        className="p-8 bg-ui-primary text-ui-light"
+        className="bg-ui-primary text-ui-light"
         style={{
             position: 'fixed',
             width: '400px',
@@ -20,6 +21,10 @@ const About = ({aboutClose}) => {
             boxShadow: '10px 10px 10px #888888',
             background: 'linear-gradient(90deg, #283344 0%, #344a6e 100%)'
         }}>
+        <div className="flex justify-end p-4">
+            <WindowClose close={aboutClose}/>
+        </div>
+        <div className="p-8">
         <div className="flex items-center">
             <UIWBLogo className="w-12 h-12"/>
             <span className="text-2xl">UI WORKBENCH</span>
@@ -27,6 +32,7 @@ const About = ({aboutClose}) => {
         <p className="mt-8">
             Created especially for Alina
         </p>
+        </div>
     </div>
 }
 export default About
