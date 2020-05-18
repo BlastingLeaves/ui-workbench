@@ -17,6 +17,9 @@ module.exports = {
             colors: {
                 ...theme['colors'],
                 ...colors
+            },
+            'box-shadow': {
+                'shadow-lg': '10px 10px 10px #AAAAAA'
             }
         },
         fill: {

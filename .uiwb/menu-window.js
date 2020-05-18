@@ -11,18 +11,16 @@ const MenuWindow = ({menuOpened, menuClose, aboutOpen, children}) => {
     useOutsideClick(ref, () => menuOpened && menuClose())
 
     return <div ref={ref}
-                className="sm:w-1/2 md:w-1/3 w-full bg-ui-primary text-ui-light "
+                className="fixed top-0 sm:w-1/2 md:w-1/3 w-full bg-ui-primary text-ui-light h-full"
                 style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: menuOpened ? 0 : '-100%',
-                    height: '100%',
-                    boxShadow: "5px 5px 5px #9E9E9E",
-                    transition: 'left .5s'
+                    left: menuOpened ? 0 : '-110%',
+                    transition: 'left .5s',
+                    boxShadow: '10px 10px 10px #aaa'
                 }}>
-        <div className="flex justify-between items-center p-4">
+        <div style={{borderBottom: '1px solid'}}
+            className="flex justify-between items-center p-4 border-ui-light">
             <div className="text-lg flex items-center">
-                <UIWBLogo className="w-6 h-6 mr-2"/>
+                <UIWBLogo className="w-8 h-8 mr-2"/>
                 UI WORKBENCH
             </div>
             <WindowClose close={menuClose}/>
