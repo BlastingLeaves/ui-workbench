@@ -1,6 +1,1 @@
-import React from 'react'
-
-const Dummy3 = () =>
-    <h1>DUMMY 3</h1>
-
-export default Dummy3
+export Dummy3 from '../components/dummy-3'

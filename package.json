@@ -7,13 +7,13 @@
     "simple",
     "ui"
   ],
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "tw": "tailwindcss build .uiwb/css/tailwind.css -o .uiwb/css/styles.css",
+    "tw": "tailwindcss dist .uiwb/css/tailwind.css -o .uiwb/css/styles.css",
     "start": "yarn run tw && webpack-dev-server --open --mode development",
     "test": "mocha test/*.spec.js --require esm",
-    "build": "yarn run tw && webpack --mode production"
+    "build": "rollup -c"
   },
   "author": "Vlad Blindu",
   "license": "MIT",
@@ -42,9 +42,11 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@rollup/plugin-babel": "^5.0.0",
     "classnames": "^2.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-google-recaptcha": "^2.0.1"
+    "react-google-recaptcha": "^2.0.1",
+    "rollup": "^2.10.4"
   }
 }
