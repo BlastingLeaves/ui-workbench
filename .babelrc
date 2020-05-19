@@ -1,5 +1,13 @@
 {
-  "plugins": ["import-directory"],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    "import-directory"
+  ],
   "presets": [
     "@babel/preset-env",
     "@babel/preset-react"
