@@ -11,7 +11,7 @@ const MenuWindow = ({menuOpened, menuClose, aboutOpen, children}) => {
     useOutsideClick(ref, () => menuOpened && menuClose())
 
     return <div ref={ref}
-                className="fixed top-0 sm:w-1/2 md:w-1/3 w-full bg-ui-primary text-ui-light h-full"
+                className="fixed top-0 sm:w-1/2 md:w-1/3 w-full bg-ui-primary text-ui-light h-full z-50"
                 style={{
                     left: menuOpened ? 0 : '-110%',
                     transition: 'left .5s',
